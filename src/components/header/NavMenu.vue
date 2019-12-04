@@ -94,11 +94,6 @@
     top: 0;
     z-index: 1;
 
-
-    animation: scale-right-reverse 0.3s linear both;
-    opacity: 0;
-    transition: opacity 0.3s;
-
     display: block;
     width: 100%;
 
@@ -106,6 +101,10 @@
 
     background-color: $light-blue-darken;
     border-radius: 10px;
+    opacity: 0;
+
+    transition: opacity 0.3s;
+    animation: scale-right-reverse 0.3s linear both;
 
     & li {
       padding: 10px 0;
@@ -124,7 +123,6 @@
 
       font-weight: 600;
       color: $white;
-
 
       cursor: pointer;
 
@@ -150,7 +148,9 @@
 
     &--active {
       display: block;
+
       opacity: 1;
+
       animation: scale-right 0.3s linear both;
     }
   }
@@ -175,6 +175,30 @@
     100% {
       transform: scaleX(0);
       transform-origin: 100% 100%;
+    }
+  }
+
+  @media #{$media-720p} {
+    .nav-menu {
+      &__btn {
+        display: none;
+      }
+
+      &__list {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0.625em;
+
+        opacity: 1;
+
+        animation: none;
+
+        & li {
+          border: none;
+        }
+      }
     }
   }
 }
