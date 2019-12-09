@@ -17,6 +17,28 @@
 @import "../../scss/typography.scss";
 @import "../../scss/body.scss";
 
+@keyframes scale-left {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
+
+@keyframes scale-right {
+  0% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+  }
+}
+
 .nav-menu {
   position: relative;
 
@@ -104,7 +126,7 @@
     opacity: 0;
 
     transition: opacity 0.3s;
-    animation: scale-right-reverse 0.3s linear both;
+    animation: scale-right 0.3s linear both;
 
     & li {
       padding: 10px 0;
@@ -151,30 +173,7 @@
 
       opacity: 1;
 
-      animation: scale-right 0.3s linear both;
-    }
-  }
-
-
-  @keyframes scale-right {
-    0% {
-      transform: scaleX(0);
-      transform-origin: 100% 100%;
-    }
-    100% {
-      transform: scaleX(1);
-      transform-origin: 100% 100%;
-    }
-  }
-
-  @keyframes scale-right-reverse {
-    0% {
-      transform: scaleX(1);
-      transform-origin: 100% 100%;
-    }
-    100% {
-      transform: scaleX(0);
-      transform-origin: 100% 100%;
+      animation: scale-left 0.3s linear both;
     }
   }
 

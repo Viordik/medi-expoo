@@ -2,6 +2,8 @@
   <main class="main">
     <div class="wrapper">
       <Banner />
+      <CarouselProject />
+      <CalendarSubscription />
     </div>
   </main>
 </template>
@@ -15,11 +17,15 @@
 
 <script>
   import Banner from './main/Banner';
+  import CarouselProject from './main/Сarousel';
+  import CalendarSubscription from './main/CalendarSubscription';
 
   export default {
     name: 'Main',
     components: {
-      Banner
+      Banner,
+      CarouselProject,
+      CalendarSubscription
     },
 
     data: () => {
