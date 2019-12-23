@@ -17,7 +17,7 @@
 
 <script>
   import Banner from './main/Banner';
-  import CarouselProject from './main/Сarousel';
+  import CarouselProject from './main/Carousel';
   import CalendarSubscription from './main/CalendarSubscription';
 
   export default {
