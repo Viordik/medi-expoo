@@ -4,8 +4,9 @@
       <a class="calendar-subscription__link" href="#!">Календарь событий</a>
     </div>
     <div class="calendar-subscription__link-wr">
-      <a class="calendar-subscription__link" href="#!">Подписка на анонсы</a>
+      <a class="calendar-subscription__link" href="#!" @click.prevent="modalOpen">Подписка на анонсы</a>
     </div>
+    <Modal :class="{'modal--active' : isActiveModal}"/>
   </section>
 </template>
 
@@ -79,11 +80,21 @@
 </style>
 
 <script>
+import Modal from '../standart/Modal';
+
 export default {
   name: 'CalendarSubscription',
+  components: {
+    Modal
+  },
   data: () => {
     return {
-
+      isActiveModal: false
+    }
+  },
+  methods: {
+    modalOpen: function() {
+      this.isActiveModal = !this.isActiveModal;
     }
   }
 }
